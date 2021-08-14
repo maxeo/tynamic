@@ -1,4 +1,3 @@
-//Libreria per tablella dinamica
 let tynamic = {
     updateTable: function (table_el, table_data, myFunctions = {}) {
         let rmEl = table_el.querySelectorAll('thead,tbody');

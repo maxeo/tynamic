@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tynamic Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background: #111;
+            color: white;
+        }
+
+        .bg-black {
+            background-color: #000;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="../dist/tynamic.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="card p-3 bg-dark mt-3 mb-3">
+        <div class="col-12">
+            <h1>Tynamic</h1>
+            <p class="mt-3">
+                The library is implementation in pure JavaScript.
+                With this library you can render a virtual table dynamically.
+            </p>
+            <h3 class="mb-3">Usage</h3>
+            <h5>Standard bootstrap table without library</h5>
+            <code class="card bg-black p-3" contenteditable="true">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
+                  style="color:#a5c261;">="test1" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark table-striped"</span><span style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#e8bf6a;">    &lt;thead&gt;<br></span><span style="color:#e8bf6a;">    &lt;tr&gt;<br></span><span style="color:#e8bf6a;">        &lt;th&gt;</span>#<span
+                  style="color:#e8bf6a;">&lt;/th&gt;<br></span><span style="color:#e8bf6a;">        &lt;th&gt;</span>First<span style="color:#e8bf6a;">&lt;/th&gt;<br></span><span
+                  style="color:#e8bf6a;">        &lt;th&gt;</span>Last<span style="color:#e8bf6a;">&lt;/th&gt;<br></span><span style="color:#e8bf6a;">        &lt;th&gt;</span>Handle<span
+                  style="color:#e8bf6a;">&lt;/th&gt;<br></span><span style="color:#e8bf6a;">    &lt;/tr&gt;<br></span><span style="color:#e8bf6a;">    &lt;/thead&gt;<br></span><span
+                  style="color:#e8bf6a;">    &lt;tbody&gt;<br></span><span style="color:#e8bf6a;">    &lt;tr&gt;<br></span><span style="color:#e8bf6a;">        &lt;th&gt;</span>1<span
+                  style="color:#e8bf6a;">&lt;/th&gt;<br></span><span style="color:#e8bf6a;">        &lt;td&gt;</span>Mark<span style="color:#e8bf6a;">&lt;/td&gt;<br></span><span
+                  style="color:#e8bf6a;">        &lt;td&gt;</span>Otto<span style="color:#e8bf6a;">&lt;/td&gt;<br></span><span style="color:#e8bf6a;">        &lt;td&gt;</span>@mdo<span
+                  style="color:#e8bf6a;">&lt;/td&gt;<br></span><span style="color:#e8bf6a;">    &lt;/tr&gt;<br></span><span style="color:#e8bf6a;">    &lt;tr&gt;<br></span><span
+                  style="color:#e8bf6a;">        &lt;th&gt;</span>2<span style="color:#e8bf6a;">&lt;/th&gt;<br></span><span style="color:#e8bf6a;">        &lt;td&gt;</span>Jacob<span
+                  style="color:#e8bf6a;">&lt;/td&gt;<br></span><span style="color:#e8bf6a;">        &lt;td&gt;</span>Thornton<span style="color:#e8bf6a;">&lt;/td&gt;<br></span><span
+                  style="color:#e8bf6a;">        &lt;td&gt;</span>@fat<span style="color:#e8bf6a;">&lt;/td&gt;<br></span><span style="color:#e8bf6a;">    &lt;/tr&gt;<br></span><span
+                  style="color:#e8bf6a;">    &lt;tr&gt;<br></span><span style="color:#e8bf6a;">        &lt;th&gt;</span>3<span style="color:#e8bf6a;">&lt;/th&gt;<br></span><span
+                  style="color:#e8bf6a;">        &lt;td </span><span style="color:#bababa;">colspan</span><span style="color:#a5c261;">="2"</span><span style="color:#e8bf6a;">&gt;</span>Larry the Bird<span
+                  style="color:#e8bf6a;">&lt;/td&gt;<br></span><span style="color:#e8bf6a;">        &lt;td&gt;</span>@twitter<span style="color:#e8bf6a;">&lt;/td&gt;<br></span><span
+                  style="color:#e8bf6a;">    &lt;/tr&gt;<br></span><span style="color:#e8bf6a;">    &lt;/tbody&gt;<br></span><span style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
+            </code>
+            <br>
+            <table id="test1" class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Larry the Bird</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-12 mt-3">
+            <h5>Standard bootstrap table with library:</h5>
+            <h6>HTML</h6>
+            <code class="card bg-black p-3 mb-2">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
+                  style="color:#a5c261;">="test2" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark table-striped"</span><span style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
+            </code>
+            <h6>JAVASCRIPT</h6>
+            <code class="card bg-black p-3">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;"><span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">tynamic</span>.<span style="color:#ffc66d;">updateTable</span>(<br>    <span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">document</span>.<span style="color:#ffc66d;">getElementById</span>(<span style="color:#6a8759;">"test2"</span>)<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">    </span>{<br>        <span style="color:#6a8759;">'head'</span>: [<span style="color:#6a8759;">'#'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'First'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Last'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Handle'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span><span
+                  style="color:#6a8759;">'body'</span>: [<br>            [<span style="color:#6897bb;">1</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Mark'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Otto'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'@mdo'</span>]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>[<span style="color:#6897bb;">2</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'Jacob'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Thornton'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@fat'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>[<span style="color:#6897bb;">3</span><span
+                  style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'Larry the Bird'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@twitter'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span>]<br>    }<span
+                  style="color:#cc7832;">,<br></span>)</pre>
+            </code>
+
+
+            <table id="test2" class="table table-dark table-striped">
+            </table>
+            <script>
+                tynamic.updateTable(
+                    document.getElementById("test2"),
+                    {
+                        'head': ['#', 'First', 'Last', 'Handle'],
+                        'body': [
+                            [1, 'Mark', 'Otto', '@mdo'],
+                            [2, 'Jacob', 'Thornton', '@fat'],
+                            [3, {'html': 'Larry the Bird', 'attr': {'colSpan': 2}}, '@twitter'],
+                        ]
+                    },
+                )
+            </script>
+
+
+        </div>
+        <div class="col-12 mt-3">
+            <h5>Alternative usage:</h5>
+            <h6>HTML</h6>
+            <code class="card bg-black p-3 mb-2">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
+                  style="color:#a5c261;">="test3" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark table-striped"</span><span style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
+            </code>
+            <h6>JAVASCRIPT</h6>
+            <code class="card bg-black p-3">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;"><span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">tynamic</span>.<span style="color:#ffc66d;">updateTable</span>(<br>    <span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">document</span>.<span style="color:#ffc66d;">getElementById</span>(<span style="color:#6a8759;">"test3"</span>)<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">    </span>{<br>        <span style="color:#6a8759;">'head'</span>: [<span style="color:#6a8759;">'#'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'First'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Last'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Handle'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span><span
+                  style="color:#6a8759;">'body'</span>: [<br>            [<span style="color:#6897bb;">1</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Mark'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Otto'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'@mdo'</span>]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>[<span style="color:#6897bb;">2</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'Jacob'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Thornton'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@fat'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>[<span style="color:#6897bb;">3</span><span
+                  style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'Larry the Bird'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@twitter'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span>]<br>    }<span
+                  style="color:#cc7832;">,<br></span>)</pre>
+            </code>
+
+
+            <table id="test3" class="table table-dark table-striped">
+            </table>
+            <script>
+                tynamic.updateTable(
+                    document.getElementById("test3"),
+                    {
+                        'data': [
+                            {
+                                '#': 1,
+                                'First': 'Mark',
+                                'Last': 'Otto',
+                                'Handle': '@mdo',
+                            },
+                            {
+                                '#': 2,
+                                'First': 'Jacob',
+                                'Last': 'Thornton',
+                                'Handle': '@fat',
+                            },
+                            {
+                                '#': 3,
+                                'First': {'html': 'Larry the Bird', 'attr': {'colSpan': 2}},
+                                'Handle': '@twitter',
+                            },
+                        ]
+                    },
+                )
+            </script>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
