@@ -1,2 +1,2 @@
 # tynamic
-https://maxeo.github.io/tynamic/demo/index.html
+https://maxeo.github.io/tynamic/demo/
