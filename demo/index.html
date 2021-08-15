@@ -15,6 +15,21 @@
         .bg-black {
             background-color: #000;
         }
+
+        .pencil_row {
+            height: 0;
+            overflow: visible;
+        }
+
+        .pencil_icon {
+            filter: invert(100%);
+            float: right;
+            overflow: visible;
+            top: 10px;
+            position: relative;
+            z-index: 100;
+            right: 10px;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
@@ -105,7 +120,7 @@
                   style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'Larry the Bird'</span><span style="color:#cc7832;">, </span><span
                   style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span style="color:#cc7832;">, </span><span
                   style="color:#6a8759;">'@twitter'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span>]<br>    }<span
-                  style="color:#cc7832;">,<br></span>)</pre>
+                  style="color:#cc7832;">,<br></span>)</span></pre>
             </code>
 
 
@@ -155,7 +170,7 @@
                   style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span style="color:#cc7832;">,<br></span><span
                   style="color:#cc7832;">                </span><span style="color:#6a8759;">'Handle'</span>: <span style="color:#6a8759;">'@twitter'</span><span
                   style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>}<span style="color:#cc7832;">,<br></span><span
-                  style="color:#cc7832;">        </span>]<br>    }<span style="color:#cc7832;">,<br></span>)</pre>
+                  style="color:#cc7832;">        </span>]<br>    }<span style="color:#cc7832;">,<br></span>)</span></pre>
             </code>
 
 
@@ -195,7 +210,8 @@
             <h6>HTML</h6>
             <code class="card bg-black p-3 mb-2">
                 <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
-                  style="color:#a5c261;">="test3" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark"</span><span style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#a5c261;">="test4" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark"</span><span
+                  style="color:#e8bf6a;">&gt;<br></span><span
                   style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
             </code>
             <h6>JAVASCRIPT</h6>
@@ -279,6 +295,77 @@
                 )
             </script>
 
+
+        </div>
+        <div class="col-12 mt-3">
+            <h5>Try yourself:</h5>
+            <h6>HTML</h6>
+            <code class="card bg-black p-3 mb-2">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
+                  style="color:#a5c261;">="test5" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark"</span><span
+                  style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
+            </code>
+            <h6>EDITABLE JAVASCRIPT</h6>
+            <div class="row pencil_row">
+                <div class="col-12">
+                    <img class="pencil_icon" src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png">
+                </div>
+            </div>
+            <code id="editablejs" class="card bg-black p-3" contenteditable="true">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">tynamic</span>.<span style="color:#ffc66d;">updateTable</span>(<br>    <span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">document</span>.<span style="color:#ffc66d;">getElementById</span>(<span style="color:#6a8759;">"test5"</span>)<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">    </span>{<br>        <span style="color:#6a8759;">'head'</span>: {<br>            <span style="color:#6a8759;">'class'</span>: <span
+                  style="color:#6a8759;">"table-light"</span><span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span><span
+                  style="color:#6a8759;">'data'</span>: [{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'#'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'class'</span>: <span style="color:#6a8759;">'bg-danger'</span>}<span style="color:#cc7832;">, </span><span style="color:#6a8759;">'First'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Last'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Handle'</span>]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span>}<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span><span
+                  style="color:#6a8759;">'body'</span>: {<br>            <span style="color:#6a8759;">'class'</span>: <span style="color:#6a8759;">'table-dark'</span><span style="color:#cc7832;">,<br></span><span
+                  style="color:#cc7832;">            </span><span style="color:#6a8759;">'data'</span>: [<br>                [{<span style="color:#6a8759;">'tag'</span>: <span style="color:#6a8759;">'th'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'html'</span>: <span style="color:#6897bb;">1</span>}<span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span
+                  style="color:#6a8759;">'Mark'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'class'</span>: <span
+                  style="color:#6a8759;">'bg-warning text-dark'</span>}<span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Otto'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@mdo'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">                </span>[<span style="color:#6897bb;">2</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Jacob'</span><span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span
+                  style="color:#6a8759;">'Thornton'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'title'</span>: <span
+                  style="color:#6a8759;">'custom'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'style'</span>: <span style="color:#6a8759;">'color:red'</span>}}<span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'@fat'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">                </span>[<span
+                  style="color:#6897bb;">3</span><span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'Larry the Bird'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span
+                  style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'</span><span style="color:#6a8759;background-color:#364135;">&lt;button class="btn btn-success"&gt;button green&lt;/button&gt;</span><span
+                  style="color:#6a8759;">'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'f'</span>: <span style="color:#6a8759;">'clickMe'</span>}]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>]<br>        }<br>    }<span style="color:#cc7832;">, </span>{<br>        <span
+                  style="color:#ffc66d;">clickMe</span>: <span style="color:#cc7832;">function </span>(data<span style="color:#cc7832;">, </span>td) {<br>            <span
+                  style="color:#cc7832;">let </span>btn = td.<span style="color:#ffc66d;">querySelector</span>(<span style="color:#6a8759;">'</span><span style="color:#e8bf6a;">button</span><span
+                  style="color:#6a8759;">'</span>)<span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">            </span>btn.<span
+                  style="color:#ffc66d;">addEventListener</span>(<span style="color:#6a8759;">'click'</span><span style="color:#cc7832;">, function </span>() {<br>                <span
+                  style="color:#cc7832;">if </span>(btn.<span style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">contains</span>(<span style="color:#6a8759;">'btn-success'</span>)) {<br>                    btn.<span
+                  style="color:#9876aa;">innerHTML </span>= <span style="color:#6a8759;">'button red'</span><span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">remove</span>(<span style="color:#6a8759;">'btn-success'</span>)<span
+                  style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span
+                  style="color:#ffc66d;">add</span>(<span style="color:#6a8759;">'btn-danger'</span>)<span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                </span>} <span style="color:#cc7832;">else </span>{<br>                    btn.<span style="color:#9876aa;">innerHTML </span>= <span
+                  style="color:#6a8759;">'button green'</span><span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span
+                  style="color:#ffc66d;">add</span>(<span style="color:#6a8759;">'btn-success'</span>)<span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span
+                  style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">remove</span>(<span style="color:#6a8759;">'btn-danger'</span>)<span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                </span>}<br><br>            })<br>        }<br>    }<br>)</pre>
+            </code>
+
+
+            <table id="test5" class="table table-dark">
+            </table>
+            <script>
+                let editablejs = document.querySelector('#editablejs')
+
+                function evalEditableJs() {
+                    eval(document.querySelector('#editablejs').innerText);
+                }
+
+                evalEditableJs();
+                editablejs.addEventListener('blur', evalEditableJs);
+            </script>
 
         </div>
     </div>
