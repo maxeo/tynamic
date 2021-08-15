@@ -23,7 +23,7 @@
 <body>
 <div class="container">
     <div class="card p-3 bg-dark mt-3 mb-3">
-        <div class="col-12">
+        <div class="col-12 mt-3">
             <h1>Tynamic</h1>
             <p class="mt-3">
                 The library is implementation in pure JavaScript.
@@ -81,7 +81,6 @@
                 </tbody>
             </table>
         </div>
-
         <div class="col-12 mt-3">
             <h5>Standard bootstrap table with library:</h5>
             <h6>HTML</h6>
@@ -186,6 +185,97 @@
                             },
                         ]
                     },
+                )
+            </script>
+
+
+        </div>
+        <div class="col-12 mt-3">
+            <h5>Custom usage:</h5>
+            <h6>HTML</h6>
+            <code class="card bg-black p-3 mb-2">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span style="color:#e8bf6a;">&lt;table </span><span style="color:#bababa;">id</span><span
+                  style="color:#a5c261;">="test3" </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="table table-dark table-striped"</span><span style="color:#e8bf6a;">&gt;<br></span><span
+                  style="color:#e8bf6a;">&lt;/table&gt;</span></pre>
+            </code>
+            <h6>JAVASCRIPT</h6>
+            <code class="card bg-black p-3">
+                <pre style="color:#a9b7c6;font-family:'JetBrains Mono',monospace;font-size:14px;"><span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">tynamic</span>.<span style="color:#ffc66d;">updateTable</span>(<br>    <span
+                  style="color:#9876aa;font-weight:bold;font-style:italic;">document</span>.<span style="color:#ffc66d;">getElementById</span>(<span style="color:#6a8759;">"test4"</span>)<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">    </span>{<br>        <span style="color:#6a8759;">'head'</span>: {<br>            <span style="color:#6a8759;">'class'</span>: <span
+                  style="color:#6a8759;">"table-light"</span><span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span><span
+                  style="color:#6a8759;">'data'</span>: [{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'#'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'class'</span>: <span style="color:#6a8759;">'bg-danger'</span>}<span style="color:#cc7832;">, </span><span style="color:#6a8759;">'First'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Last'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Handle'</span>]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span>}<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">        </span><span
+                  style="color:#6a8759;">'body'</span>: {<br>            <span style="color:#6a8759;">'class'</span>: <span style="color:#6a8759;">'table-dark'</span><span style="color:#cc7832;">,<br></span><span
+                  style="color:#cc7832;">            </span><span style="color:#6a8759;">'data'</span>: [<br>                [{<span style="color:#6a8759;">'tag'</span>: <span style="color:#6a8759;">'th'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'html'</span>: <span style="color:#6897bb;">1</span>}<span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span
+                  style="color:#6a8759;">'Mark'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'class'</span>: <span
+                  style="color:#6a8759;">'bg-warning text-dark'</span>}<span style="color:#cc7832;">, </span><span style="color:#6a8759;">'Otto'</span><span style="color:#cc7832;">, </span><span
+                  style="color:#6a8759;">'@mdo'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">                </span>[<span style="color:#6897bb;">2</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'Jacob'</span><span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span
+                  style="color:#6a8759;">'Thornton'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'title'</span>: <span
+                  style="color:#6a8759;">'custom'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'style'</span>: <span style="color:#6a8759;">'color:red'</span>}}<span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'@fat'</span>]<span style="color:#cc7832;">,<br></span><span style="color:#cc7832;">                </span>[<span
+                  style="color:#6897bb;">3</span><span style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'Larry the Bird'</span><span
+                  style="color:#cc7832;">, </span><span style="color:#6a8759;">'attr'</span>: {<span style="color:#6a8759;">'colSpan'</span>: <span style="color:#6897bb;">2</span>}}<span
+                  style="color:#cc7832;">, </span>{<span style="color:#6a8759;">'html'</span>: <span style="color:#6a8759;">'</span><span style="color:#6a8759;background-color:#364135;">&lt;button class="btn btn-success"&gt;button green&lt;/button&gt;</span><span
+                  style="color:#6a8759;">'</span><span style="color:#cc7832;">, </span><span style="color:#6a8759;">'f'</span>: <span style="color:#6a8759;">'clickMe'</span>}]<span
+                  style="color:#cc7832;">,<br></span><span style="color:#cc7832;">            </span>]<br>        }<br>    }<span style="color:#cc7832;">, </span>{<br>        <span
+                  style="color:#ffc66d;">clickMe</span>: <span style="color:#cc7832;">function </span>(data<span style="color:#cc7832;">, </span>td) {<br>            <span
+                  style="color:#cc7832;">let </span>btn = td.<span style="color:#ffc66d;">querySelector</span>(<span style="color:#6a8759;">'</span><span style="color:#e8bf6a;">button</span><span
+                  style="color:#6a8759;">'</span>)<span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">            </span>btn.<span
+                  style="color:#ffc66d;">addEventListener</span>(<span style="color:#6a8759;">'click'</span><span style="color:#cc7832;">, function </span>() {<br>                <span
+                  style="color:#cc7832;">if </span>(btn.<span style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">contains</span>(<span style="color:#6a8759;">'btn-success'</span>)) {<br>                    btn.<span
+                  style="color:#9876aa;">innerHTML </span>= <span style="color:#6a8759;">'button red'</span><span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">remove</span>(<span style="color:#6a8759;">'btn-success'</span>)<span
+                  style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span
+                  style="color:#ffc66d;">add</span>(<span style="color:#6a8759;">'btn-danger'</span>)<span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                </span>} <span style="color:#cc7832;">else </span>{<br>                    btn.<span style="color:#9876aa;">innerHTML </span>= <span
+                  style="color:#6a8759;">'button green'</span><span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span style="color:#9876aa;">classList</span>.<span
+                  style="color:#ffc66d;">add</span>(<span style="color:#6a8759;">'btn-success'</span>)<span style="color:#cc7832;">;<br></span><span style="color:#cc7832;">                    </span>btn.<span
+                  style="color:#9876aa;">classList</span>.<span style="color:#ffc66d;">remove</span>(<span style="color:#6a8759;">'btn-danger'</span>)<span style="color:#cc7832;">;<br></span><span
+                  style="color:#cc7832;">                </span>}<br><br>            })<br>        }<br>    }<br>)</pre>
+            </code>
+
+
+            <table id="test4" class="table table-dark">
+            </table>
+            <script>
+                tynamic.updateTable(
+                    document.getElementById("test4"),
+                    {
+                        'head': {
+                            'class': "table-light",
+                            'data': [{'html': '#', 'class': 'bg-danger'}, 'First', 'Last', 'Handle'],
+                        },
+                        'body': {
+                            'class': 'table-dark',
+                            'data': [
+                                [{'tag': 'th', 'html': 1}, {'html': 'Mark', 'class': 'bg-warning text-dark'}, 'Otto', '@mdo'],
+                                [2, 'Jacob', {'html': 'Thornton', 'attr': {'title': 'custom', 'style': 'color:red'}}, '@fat'],
+                                [3, {'html': 'Larry the Bird', 'attr': {'colSpan': 2}}, {'html': '<button class="btn btn-success">button green</button>', 'f': 'clickMe'}],
+                            ]
+                        }
+                    }, {
+                        clickMe: function (data, td) {
+                            let btn = td.querySelector('button');
+                            btn.addEventListener('click', function () {
+                                if (btn.classList.contains('btn-success')) {
+                                    btn.innerHTML = 'button red';
+                                    btn.classList.remove('btn-success');
+                                    btn.classList.add('btn-danger');
+                                } else {
+                                    btn.innerHTML = 'button green';
+                                    btn.classList.add('btn-success');
+                                    btn.classList.remove('btn-danger');
+                                }
+
+                            })
+                        }
+                    }
                 )
             </script>
 
