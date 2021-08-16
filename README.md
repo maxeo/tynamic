@@ -197,4 +197,4 @@ tynamic.updateTable(
 
 ### Try yourself:
 
-You can [Click here](https://maxeo.github.io/tynamic/demo/#try_yourself) to test you custom code
+You can [Click here](https://jsfiddle.net/maxeo/phmyq3us/4/) to test you custom code
