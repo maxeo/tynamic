@@ -113,34 +113,6 @@ tynamic.updateTable(
 
 ![Screenshot](demo/screenshot/demo-001.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Custom usage:
 
 #### HTML
