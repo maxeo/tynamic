@@ -25,7 +25,7 @@ let tynamic = {
         let table_data_body = table_data.body.data === undefined ? table_data.body : table_data.body.data;
 
         if (table_data.head.class !== undefined) {
-            if (typeof table_data.head.class == 'object') {
+            if (typeof table_data.head.class === 'object') {
                 for (let index in table_data.head.class) {
                     let tClass = table_data.head.class[index];
                     table_el_thead.classList.add(tClass);
@@ -35,7 +35,7 @@ let tynamic = {
             }
         }
         if (table_data.body.class !== undefined) {
-            if (typeof table_data.body.class == 'object') {
+            if (typeof table_data.body.class === 'object') {
                 for (let index in table_data.body.class) {
                     let tClass = table_data.body.class[index];
                     table_el_tbody.classList.add(tClass);
@@ -119,12 +119,12 @@ let tynamic = {
                                 td_el.classList.add(thisTdCalss[index]);
                             }
                         }
-                        if (data_td.data !== undefined && typeof data_td.data == 'object') {
+                        if (data_td.data !== undefined && typeof data_td.data === 'object') {
                             for (let index in data_td.data) {
                                 td_el.dataset[index] = data_td.data[index];
                             }
                         }
-                        if (data_td.attr !== undefined && typeof data_td.attr == 'object') {
+                        if (data_td.attr !== undefined && typeof data_td.attr === 'object') {
                             for (let attrIndex in data_td.attr) {
                                 td_el[attrIndex] = data_td.attr[attrIndex];
                             }
